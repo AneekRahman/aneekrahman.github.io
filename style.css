@@ -1,4 +1,5 @@
 /* 12 GRID COLUMN MODEL SETTINGS DECLARATION HERE */
+
 *{box-sizing: border-box;}
 body{margin: 0;background-color: #f1f1f1;}
 .col-1 {width: 8.33%;}
@@ -15,14 +16,24 @@ body{margin: 0;background-color: #f1f1f1;}
 .col-12 {width: 100%;}
 [class*="col-"]{
     float: left;
-    border: 1px dashed grey;
+
 }
 .row::after{
     content: "";
     clear: both;
     display: table;
 }
+
 /* 12 GRID COLUMN MODEL SETTINGS DECLARATION ENDS HERE */
+
+
+
+/* THE SIDE AND TOP BAR CONTENT STYLING STARTS HERE */
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
 .sidebox{
     position: fixed;
     height: 100%;
@@ -31,31 +42,33 @@ body{margin: 0;background-color: #f1f1f1;}
     overflow: hidden;
 }
 .sidebox .about h2,.abouttop h2{
-    font-family: raleway;
-    margin:5px 14px;
+    font-family: roboto;
+    margin:5px 20px;
     padding:0px 0px;
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.3em;
     white-space: nowrap;
+    cursor: default;
 }
 .sidebox .about p,.abouttop p{
-    margin: 10px 14px 4px;
+    margin: 10px 20px 4px;
     font-family: roboto;
-    font-style: italic;
     font-size: 1em;
     color: #878787;
     white-space: nowrap;
+    font-weight: 300;
+    cursor: default;
 }
 #dp,#dpslide{
-    width: 10em;
+    width: 8em;
     border-radius: 10px;
     display: block;
 }
 .wrapper{
-    margin:45px 14px 0;
+    margin:20px;
     position: relative;
-    width: 10.1em;
+    width: 8em;
     border-radius: 10px;
 }
 .hover{
@@ -77,11 +90,12 @@ body{margin: 0;background-color: #f1f1f1;}
     background-color:#043e9b;
     border: none;
     padding: 5px;
-    font-size: 1em;
+    font-size: .7em;
     width: 6em;
     font-family: raleway;
     color: #fff;
     cursor: pointer;
+    outline: none;
 }
 .wrapper button:hover,.wrapperslide button:hover{
     background-color:#0061ff;
@@ -96,26 +110,31 @@ body{margin: 0;background-color: #f1f1f1;}
 .sidebox ul li i,.toptabs ul li i{
     padding-right: 20px
 }
+.sidebox ul li:nth-child(1),.toptabs ul li:nth-child(1){
+    color: #009688;
+}
 .sidebox ul li:nth-child(2), .toptabs ul li:nth-child(2){
     margin-left: 3px
 }
 .sidebox ul li,.toptabs ul li{
-    padding: 10px 30px;
+    padding: 10px 22px;
     font-family: roboto;
-    font-size: 2em;
+    font-size: 1.4em;
     transition: .2s;
     cursor: pointer;
     font-weight: 200;
     white-space: nowrap;
+    text-transform: uppercase;
 }
 .sidebox ul li:hover,.toptabs ul li:hover{
     background-color: #2b9fff;
+    color: #fff;
 }
 .sidebox ul li:hover i,.toptabs ul li:hover i{
     color: #fff;
 }
 .sidebox .social{
-    margin:2em .7em 0;
+    margin:10px 17px 0;
     white-space: nowrap;
 }
 .sidebox .social a,.topsocial a{
@@ -141,7 +160,7 @@ body{margin: 0;background-color: #f1f1f1;}
     margin:20px 14px 0;
     position: relative;
     float: right;
-    width: 10.1em;
+    width: 8em;
     border-radius: 10px;
 }
 .wrapperslide::after{
@@ -154,7 +173,7 @@ body{margin: 0;background-color: #f1f1f1;}
     text-align: right;
 }
 .abouttop h2{
-    margin-top: 16px;
+    margin-top: 24px;
 }
 .toptabs ul{
     margin: 0;
@@ -162,36 +181,208 @@ body{margin: 0;background-color: #f1f1f1;}
 }
 .topsocial{
     display: flex;
-    justify-content:center;
+    justify-content:flex-end;
 }
 .topsocial a{
     font-size: 2em;
     margin: 0 4px
 }
+/* THE SIDE AND TOP BAR CONTENT STYLING ENDS HERE */
+
+
+
+/* THE MAINCONTENTS OF THE PAGE STYLING STARTS HERE */
+
+.aboutmehead{
+    padding: 20px 20px 0;
+}
+.aboutmehead h2{
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 33px;
+    margin: 0 0 30px 0;
+    cursor: default;
+}
+.aboutmehead h3{
+    margin: 14px 10px 0 1px;
+    font-family: raleway;
+    font-weight: 300;
+    font-size: 13px;
+    float: left;
+    cursor: default;
+}
+.aboutmehead ul{
+    list-style: none;
+    padding: 0;
+    margin: 3px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.aboutmehead ul li{
+    padding: 10px 18px;
+    margin: 3px;
+    background-color:#fff;
+    color: #000;
+    font-family: roboto;
+    cursor: pointer;
+    font-weight: 300;
+    position: sticky;
+    top: 0;
+}
+.aboutmehead ul li:nth-child(1){
+    color: #fff;
+    background-color: #000;
+}
+.aboutmehead ul li:hover{
+    background-color: #8c8c8c;
+    color: #fff;
+}
+.divider{
+    margin: 10px 0 15px;
+    width: 100%;
+    height: 5px;
+    background-color: #c6c6c6;
+}
+#workhead,.skills h1{
+    margin: 0;
+    font-family: raleway;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 10px 0 20px 20px;
+    cursor: default;
+}
+.cards{
+    padding:0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cardwrapper{
+    background-color: #fff;
+    width: 32.5%;
+    cursor: pointer;
+}
+.cardwrapper img{
+    display: block;
+    width: 100%;
+}
+.cardwrapper:hover img{
+    opacity: 0.7;
+}
+.cardwrapper h4{
+    font-family: raleway;
+    font-size: 20px;
+    margin: 10px 20px 0;
+    font-weight: 500;
+}
+.cardwrapper p{
+    margin: 10px 20px;
+    font-family: raleway;
+    font-size: 15px;
+}
+
+.skills h1{
+    margin:30px 0 ;
+}
+.skills{
+    padding: 20px;
+}
+.grey100{
+    width: 100%;
+    background-color: #dbdbdb;
+}
+.skill100{
+    background-color: #616161; 
+}
+.skill100 p{
+    font-family: roboto;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px;
+}
+.skills h2{
+    font-family: roboto;
+    font-weight: 100;
+    font-size: 16px;
+}
+.html .skill100{
+    width: 95%;
+}
+.css .skill100{
+    width: 95%;
+}
+.javascript .skill100{
+    width: 70%;
+}
+.jquery .skill100{
+    width: 80%;
+}
+.git .skill100{
+    width: 85%;
+}
+.rwd .skill100{
+    width: 90%;
+}
+/* THE MAINCONTENTS OF THE PAGE STYLING ENDS HERE */
+
+
+
 /* THE MEDIA QUERIES GO HERE */
+
 @media screen and (max-width:950px){
     .sidebox{
         width:0;
+    }
+    .topslide{
+        height: 100%;
     }
     .main{
         margin-left: 0;
         width: 100%;
     }
-    .topslide{
-        height: 100%;
-        transition: .5s;
+    .abouttop h2{
+        margin: 18px 0 0 0;
     }
-    
+    .abouttop p{
+        margin: 0;
+    }
+    .topsocial{
+        margin-right: 11px;
+        margin-bottom: 4px;
+    }
 }
-@media screen and (max-width:610px){
+@media screen and (max-width:490px){
     .abouttop{
         width: 100%;
+    }
+    .abouttop h2{
+        margin: 10px 14px 5px;
+    }
+    .abouttop p{
+        margin: 0 14px 5px;
     }
     .topsocial{
         position: absolute;
         left: 10px;
-        margin-top: 40px;
+        margin-top:20px;
+        margin-left: 11px;
         font-size: 12px
+    }
+    .sidebox ul li,.toptabs ul li{
+        padding: 10px 25px;
+        font-family: roboto;
+        font-size: 1.4em;
+        transition: .2s;
+        cursor: pointer;
+        font-weight: 200;
+        white-space: nowrap;
+    }
+    .aboutmehead h2{
+        font-size: 23px;
+        margin: 0 0 10px 0;
     }
 }
 @media screen and (max-width:380px){
@@ -199,31 +390,47 @@ body{margin: 0;background-color: #f1f1f1;}
         width: 6.5em;
         float: right;
     }
+    .wrapperslide{
+        margin-top: 6px
+    }
+    .toptabs ul{
+        padding: 0;
+    }
     .abouttop h2,.abouttop p{
-        font-size: 100%;
+        font-size: 13px;
         margin: 10px 14px 10px
     }
     .hover{
         display: none;
     }
     .sidebox ul li,.toptabs ul li{
-    padding: 10px 30px 10px 10px;
-    font-family: roboto;
-    font-size: 1em;
-    transition: .2s;
-    cursor: pointer;
-    font-weight: 200;
-    white-space: nowrap;
+        padding: 10px 30px 10px 10px;
+        font-family: roboto;
+        font-size: 1em;
+        transition: .2s;
+        cursor: pointer;
+        font-weight: 200;
+        white-space: nowrap;
     }
     .topsocial{
         position: absolute;
-        left: 10px;
-        margin-top: 30px;
+        left: 0;
         font-size: 2px;
-        margin-top: 32px;
+        margin-top: 28px;
+        margin-left: 10px;
     }
     .topsocial a{
         font-size: 14px;
         margin: 1px;
     }
+    .aboutmehead ul{
+        float: left;
+    }
 }
+@media screen and (max-width:700px){
+    .cardwrapper{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+/* THE MEDIA QUERIES END HERE */
