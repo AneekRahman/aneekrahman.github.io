@@ -16,7 +16,6 @@ body{margin: 0;background-color: #f1f1f1;}
 .col-12 {width: 100%;}
 [class*="col-"]{
     float: left;
-
 }
 .row::after{
     content: "";
@@ -38,7 +37,7 @@ a{
     position: fixed;
     height: 100%;
     background-color: #fff;
-    transition: .3s;
+    transition: .5s;
     overflow: hidden;
 }
 .sidebox .about h2,.abouttop h2{
@@ -387,6 +386,9 @@ a{
     justify-content: space-around;
     margin-top: 20px;
 }
+.contactlist a{
+    width: 100%;
+}
 .email,.phone,.location{
     height: 150px;
     width: 100%;
@@ -404,7 +406,23 @@ a{
 .location{
     background-color: #009688;
 }
-
+.phonetip{
+    position: absolute;
+    width: 250px;
+    height: 150px;
+    right: 4%;
+    margin-top: 150px;
+    background-color: #000;
+    opacity: .8;
+    display: flex;
+    transform: translate(4%)
+}
+.phonetip p{
+    color: #fff;
+    margin: auto;
+    padding: 20px;
+    font-family: roboto;
+}
 /* THE OVERLAY STYLING STARTS HERE */
 
 .overlay{
