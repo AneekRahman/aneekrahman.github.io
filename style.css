@@ -160,6 +160,7 @@ a{
     position: absolute;
     bottom: 10px;
     background-color: #fff;
+    cursor: default;
 }
 .copyr h3,.copyr h4{
     font-family: sans-serif;
@@ -464,6 +465,7 @@ a{
 .edudiv{
     width: 80%;
     float: left;
+    cursor: default;
 }
 .subfooter h1{
     margin-left: 0;
@@ -506,6 +508,7 @@ a{
     font-size: 15px;
     text-align: center;
     padding: 24px;
+    cursor: default;
 }
 /* THE OVERLAY STYLING STARTS HERE */
 
