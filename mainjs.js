@@ -11,11 +11,13 @@ $(document).ready(function(){
     function overstart(){
         $(".overlay").css("height","100%");
         $("body").css("overflow","hidden");
+        $(".overlaycontent").css("display","flex")
         
     }
     function overstop(){
         $(".overlay").css("height","0");
         $("body").css("overflow","auto");
+        $(".overlaycontent").css("display","none")
     }
     function phoneshow(){
         $(".phonetip").css("display","block");
@@ -31,7 +33,7 @@ $(document).ready(function(){
 /* THE ACTIONS FOR EVENTS START HERE */
     
         $(".barsdiv i,.sidebarsdiv i").click(overstart);
-        $(".overlayclose i").click(overstop);
+        $(".overlaycontent i").click(overstop);
         $(".phone").click(function(){
             if(phonetipon===0){
                 phoneshow();
