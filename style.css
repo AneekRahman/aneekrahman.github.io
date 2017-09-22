@@ -152,6 +152,17 @@ a{
 .sidebox .social a:hover{
     color: #0071ce;
 }
+.copyr{
+    position: absolute;
+    bottom: 10px;
+}
+.copyr h3,.copyr h4{
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    margin:5px 20px;
+    white-space: nowrap;
+}
 .main{
     margin-left: 25%;
 }
@@ -367,7 +378,7 @@ a{
     margin: 30px 0 0
 }
 .contacthead h1{
-    margin: 0;
+    margin:10px 0 40px;
 }
 .contacthead h1 i{
     margin-top: 10px
@@ -406,22 +417,34 @@ a{
 .location{
     background-color: #009688;
 }
-.phonetip{
+.phonetip::before{
+    content: "";
+    border: 10px solid;
+    border-color: transparent transparent #000 transparent;
     position: absolute;
-    width: 250px;
-    height: 150px;
-    right: 4%;
-    margin-top: 150px;
+    right: 0;
+    margin-top: -20px;
+    margin-right: 43%;
+    opacity: 0.78;
+    transition: .5s;
+}
+.phonetip{
+    width: 25.33%;
     background-color: #000;
     opacity: .8;
     display: flex;
-    transform: translate(4%)
+    position: absolute;
+    margin-right: 20px;
+    right: 0;
+    transition: .5s;
+    display: none;
 }
 .phonetip p{
     color: #fff;
     margin: auto;
-    padding: 20px;
     font-family: roboto;
+    padding: 20px;
+    transition: .5s;
 }
 /* THE OVERLAY STYLING STARTS HERE */
 
@@ -475,6 +498,12 @@ a{
     }
     .contactlist{
         display: block;
+    }
+    .phonetip{
+        width: 70%
+    }
+    .phonetip::before{
+        margin-right: 64%;
     }
 }
 /* THE MEDIA QUERIES END HERE */
