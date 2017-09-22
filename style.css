@@ -60,6 +60,12 @@ a{
     font-weight: 300;
     cursor: default;
 }
+.sidebarsdiv i{
+    float: right;
+    margin: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
 #dp,#dpslide{
     width: 8em;
     border-radius: 10px;
@@ -171,6 +177,7 @@ a{
     padding: 10px 24px;
     float: left;
     font-size: 30px;
+    cursor: pointer;
 }
 .wrapperslide{
     margin:20px 14px 0;
@@ -259,7 +266,7 @@ a{
     height: 5px;
     background-color: #c6c6c6;
 }
-#workhead,.skills h1{
+#workhead,.skills h1,.contacthead h1{
     margin: 0;
     font-family: raleway;
     text-transform: uppercase;
@@ -268,7 +275,7 @@ a{
     margin: 10px 0 20px 20px;
     cursor: default;
 }
-#workhead i{
+#workhead i,.contacthead i{
     margin-right: 15px;
     font-size: 30px
 }
@@ -355,25 +362,69 @@ a{
 .rwd .skill100{
     width: 90%;
 }
+.contact{
+    background-color: #bbb;
+    padding: 20px;
+    margin: 30px 0 0
+}
+.contacthead h1{
+    margin: 0;
+}
+.contacthead h1 i{
+    margin-top: 10px
+}
+.contactlist i{
+    font-size: 50px;
+    margin-top: 30px;
+}
+.contactlist h2{
+    font-family: raleway;
+    font-size: 16px;
+    margin: 2px;
+    font-weight: 500;
+}.contactlist{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.email,.phone,.location{
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    opacity: .7;
+    cursor: pointer;
+}
+.email:hover,.phone:hover,.location:hover{
+    opacity: 1;
+}
+.email,.phone{
+    background-color:#616161;
+}
+.location{
+    background-color: #009688;
+}
 
 /* THE OVERLAY STYLING STARTS HERE */
 
 .overlay{
     width: 100%;
-    height: 100%;
+    height:0;
     background-color: #000;
     position: fixed;
     top: 0;
     left: 0;
     opacity: .85;
     z-index: 999;
-    display: none;
+    transition: .5s;
+    overflow: hidden;
 }
 .overlayclose i{
     color: #fff;
     float: right;
     margin: 30px;
     font-size: 60px;
+    cursor: pointer;
 }
 /* THE OVERLAY STYLING ENDS HERE */
 
@@ -403,6 +454,9 @@ a{
     .cardwrapper{
         width: 100%;
         margin-top: 20px;
+    }
+    .contactlist{
+        display: block;
     }
 }
 /* THE MEDIA QUERIES END HERE */

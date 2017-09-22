@@ -1,15 +1,16 @@
 $(document).ready(function(){
+    
+    
     function overstart(){
-        $(".overlay").css("display","block")
-        $(window).scroll(function(){
-            $(this).scrollTop(0);
-        })
+        $(".overlay").css("height","100%");
+        $("body").css("overflow","hidden");
+        
     }
     function overstop(){
-        $(".overlay").css("display","none");
-        $(window).scrollTop("auto");
+        $(".overlay").css("height","0");
+        $("body").css("overflow","auto");
     }
     
-        $(".barsdiv i").click(overstart)
-        $(".overlayclose i").click(overstop)
+        $(".barsdiv i,.sidebarsdiv i").click(overstart);
+        $(".overlayclose i").click(overstop);
 });
